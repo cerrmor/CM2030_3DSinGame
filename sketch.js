@@ -1,3 +1,5 @@
+var c;
+
 var boxSize = 50;
 var gridWidth = 800;
 var gridSize = gridWidth/boxSize;
@@ -16,28 +18,38 @@ var boxLabel;
 
 function setup() 
 {
-    createCanvas(900, 800, WEBGL);
+    c = createCanvas(900, 800, WEBGL);
+    c.parent('canvas');
     angleMode(DEGREES);
     generateConf();
 
     //creates a slide tyhat contols the frequency of the sine wave
     freqSlider = createSlider(0,4,1,0.5);
-    freqSlider.position(10,10);
+    freqSlider.parent('frequency');
+    // freqSlider.position(10,10);
     freqLabel = createP('<strong>Frequency</strong>');
-    freqLabel.position(freqSlider.x * 2 + freqSlider.width,-5);
+    freqLabel.parent('frequency');
+    freqLabel.style('color','white');
+    // freqLabel.position(freqSlider.x * 2 + freqSlider.width,-5);
     
     //creates a slider that controls the size of the amplitude of the sine wave 
     ampSlider = createSlider(0,4,1,0.5);
-    ampSlider.position(10,25);
+    ampSlider.parent('amplitude');
+    // ampSlider.position(10,25);
     ampLabel = createP('<strong>Amplitude</strong>');
-    ampLabel.position(ampSlider.x * 2 + ampSlider.width,10);
+    ampLabel.parent('amplitude');
+    ampLabel.style('color','white');
+    // ampLabel.position(ampSlider.x * 2 + ampSlider.width,10);
     
     //creates a slider that modifys the width of the boxes creating a more or less 
     //populated grid 
     boxSlider = createSlider(25,100,50)
-    boxSlider.position(10,40);
-    boxLabel = createP('<strong>Box Sized</strong>');
-    boxLabel.position(boxSlider.x * 2 + boxSlider.width,25);
+    boxSlider.parent('boxS');
+    // boxSlider.position(10,40);
+    boxLabel = createP('<strong>Box Size</strong>');
+    boxLabel.parent('boxS');
+    boxLabel.style('color','white');
+    // boxLabel.position(boxSlider.x * 2 + boxSlider.width,25);
 
 }
 

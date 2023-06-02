@@ -1,0 +1,58 @@
+html, body{
+    height:100%;
+    /* width:100%; */
+}
+body {
+    background-color: black; 
+    padding: 0; 
+    margin: 2%; 
+    display:flex;
+    width:100%;
+     /* This centers our sketch horizontally. */
+    /* justify-content: center; */
+
+    /* This centers our sketch vertically. */
+    /* align-items: center; */
+}
+span {
+    display: flex;
+    flex-direction: row;
+}
+#canvas {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+#controls{
+    position: relative;
+    align-self: start;
+    padding:5px;
+}
+#frequency {
+    align-self: start;
+    position:absolute;
+    top:0px;
+}
+#amplitude {
+    align-self: start;
+    position:absolute;
+    top:50px;
+}
+#boxS {
+    align-self: start;
+    width:100%;
+    position:absolute;
+    top:90px;
+}
+
+#instructions{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: grey;
+    padding:20px;
+}

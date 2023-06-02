@@ -8,8 +8,23 @@
     
     <script src="sketch.js" type="text/javascript"></script>
 
-    <style> body {padding: 0; margin: 0;} canvas {vertical-align: top;} </style>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
   </head>
   <body>
+    <div class="gridContainer">
+      <div></div>
+      <div id="canvas">
+        <!-- container for the game canvas and start button -->
+        <span id="controls">
+          <span id="frequency"></span>
+          <span id="amplitude"></span>
+          <span id="boxS"></span>
+        </span>
+      </div>
+      <div id="instructions">
+        <h1>Instructions</h1>
+        <p>Move the sliders to modify the animation</p>
+      </div>
+    </div>
   </body>
 </html>
