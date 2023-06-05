@@ -7,12 +7,11 @@ body {
     padding: 0; 
     margin: 2%; 
     display:flex;
-    width:100%;
-     /* This centers our sketch horizontally. */
-    /* justify-content: center; */
-
-    /* This centers our sketch vertically. */
-    /* align-items: center; */
+    vertical-align: top;
+    /* This centers our sketch horizontally. */
+    justify-content: center;
+    /*prevents the screen from scrolling*/
+    overflow-y: hidden;
 }
 span {
     display: flex;
@@ -28,6 +27,7 @@ span {
 }
 #controls{
     position: relative;
+    top:70px;
     align-self: start;
     padding:5px;
 }
@@ -47,12 +47,23 @@ span {
     position:absolute;
     top:90px;
 }
-
-#instructions{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+.showInstructions {
+    position:relative;
+    left:-360px;
+    padding:5px;
+    margin:2px;
+    display: inline-block;
+    border-radius: 5px;
+    background-color: lightgreen;
+}
+.showInstructions:hover + .instructions{
+    display: inline-block;
+    background-color: grey;
+    padding:20px;
+}
+.instructions{
+    position: absolute;
+    display: none;
     background-color: grey;
     padding:20px;
 }
