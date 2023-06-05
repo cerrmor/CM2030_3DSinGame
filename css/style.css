@@ -10,8 +10,7 @@ body {
     vertical-align: top;
     /* This centers our sketch horizontally. */
     justify-content: center;
-    /*prevents the screen from scrolling*/
-    overflow-y: hidden;
+    
 }
 span {
     display: flex;
